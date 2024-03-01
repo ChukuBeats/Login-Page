@@ -5,15 +5,11 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import InputLabel from '@mui/material/InputLabel';
-
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import FormControl from '@mui/material/FormControl';
-
 import Container from "@mui/material/Container";
-
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import Button from "@mui/material/Button";
-// import CssBaseline from '@mui/material/CssBaseline';
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -23,7 +19,6 @@ import Google from "../bg/Google.png";
 import { Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-// import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from "@mui/material/Typography";
 
 function LoginForm() {
@@ -31,23 +26,22 @@ function LoginForm() {
 
   const boxstyle = {
     position: "absolute",
-    top: "50%",
+    top: "60%",
     left: "50%",
     transform: "translate(-59%, -50%)",
-    width: "70%",
+    width: "65%",
     height: "800px",
     bgcolor: "#edede9",
-    boxShodow: 50,
+    boxShodow: 24,
     borderRadius: "15px",
     border: "2px solid none",
     elevation: "10px",
-  //  boxShodow: "20px",
+  
   };
 
   const center = {
     position: "relative",
     top: "50%",
-    // left: "37%",
   };
 
   const [showPassword, setShowPassword] = React.useState(false);
@@ -61,9 +55,9 @@ function LoginForm() {
   return (
     <>
       <div>
-        <Box sx={boxstyle}>
+        <Box sx={boxstyle} className="gidBox">
           <Grid container>
-            <Grid item xs={12} sm={12} lg={6}>
+            <Grid item  lg={6} md={12}>
               <Box 
                 style={{
                   background: "cover",
@@ -98,8 +92,8 @@ function LoginForm() {
                       
                        </Grid>
 
-                       <FormControl container spacing={1} item xs={12} sx={{ ml: "3rem", mr: "3rem",marginLeft:"55px" }} variant="outlined"  fullWidth>
-          <InputLabel  htmlFor="outlined-adornment-password" >Password</InputLabel>
+                       <FormControl container spacing={1} item xs={12} sx={{ ml: "3rem", mr: "3rem",marginLeft:"55px"}} variant="outlined"  fullWidth>
+          <InputLabel  htmlFor="outlined-adornment-password">Password</InputLabel>
          
           <OutlinedInput
             id="outlined-adornment-password"
@@ -132,7 +126,7 @@ function LoginForm() {
                         />
                       </Stack>
                     </Grid>
-                    <Grid item xs={12} sx={{ ml: "2em", mr: "5em" }}>
+                    <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                       <Button
                         type="submit"
                         variant="contained"
@@ -153,7 +147,7 @@ function LoginForm() {
 
                       <Grid className="gridOr" ></Grid>
 
-                    <Grid item xs={12} sx={{ ml: "2em", mr: "5em" }}>
+                    <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
                       <Button
                         type="submit"
                         variant="contained"
@@ -169,12 +163,12 @@ function LoginForm() {
                         }}
                       >
                         Sign in with Google {" "}
-                        <span style={{marginLeft: "15px",marginTop: "4px"}}><img src={Google} style={{height: "17px",width:"17px",backgroundColor: "none"}}/></span>
+                        <span style={{marginLeft: "5px",marginTop: "4px"}}><img src={Google} style={{height: "17px",width:"17px",backgroundColor: "none"}}/></span>
                         
                       </Button>
                     </Grid>
 
-                    <Grid item xs={12} sx={{ ml: "6em", mr: "6em" }}>
+                    <Grid item xs={12} sx={{ ml: "4em", mr: "4em" }}>
                       <Stack direction="row" spacing={2}>
                         <Typography
                           variant="body1"
@@ -198,9 +192,9 @@ function LoginForm() {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={6}>
+            <Grid item   lg={6} md={12} xs={12} sm={12}>
               <Box 
-              ><img src={Picture1} style={{width: "93%", height:" 770px",marginTop: "12px",marginLeft: "35px", borderRadius:"15px" }} className="img1"/>
+              ><img src={Picture1} style={{width: "98%", height:" 770px",marginTop: "12px", borderRadius:"15px" }} className="img1"/>
                 {" "}
               </Box>
             </Grid>
